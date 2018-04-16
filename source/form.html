@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="main-header__logo" href="#">
+        <img class="main-header__logo-image" src="#" width="100" height="100" alt="">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="#">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Фото и видео</a>
+            </li>
+            <li class="site-list__item site-list__item--current">
+              <a href="#">Форма отзыва</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Sedona - Отзыв</h1>
+      <form method="POST" class="message" action="https://echo.htmlacademy.ru">
+        <fieldset class="message__user">
+          <h2 class="fieldset-header">Представьтесь:</h2>
+          <label class="message__label" for="I">Имя*</label>
+          <input class="message__input" type="text" id="I" name="I">
+          <label class="message__label" for="F">Фамилия*</label>
+          <input class="message__input" type="text" id="F" name="F">
+          <label class="message__label" for="O">Отчество</label>
+          <input class="message__input" type="text" id="O" name="O">
+        </fieldset>
+        <fieldset class="message__contacts">
+          <h2 class="fieldset-header">Контактная информация:</h2>
+          <label class="message__label" for="email">Электронная почта*</label>
+          <input class="message__input message__input--email" type="email" id="email" name="email">
+          <label class="message__label" for="phone">Контактный телефон*</label>
+          <input class="message__input message__input--phone" type="phone" id="phone" name="phone">
+        </fieldset>
+        <fieldset class="message__impression">
+          <h2 class="fieldset-header">Ваше общее впечатление:</h2>
+          <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
+          <input class="visually-hidden" type="radio" id="ok" name="impression" checked>
+          <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
+          <input class="visually-hidden" type="radio" id="no" name="impression">
+          <label class="message__label message__label--radio" for="no-response">Затрудняюсь ответить</label>
+          <input class="visually-hidden" type="radio" id="no-response" name="impression">
+        </fieldset>
+        <fieldset class="message__objects">
+          <h2 class="fieldset-header">Посещенные достопримечательности:</h2>
+          <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
+          <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" checked>
+          <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" checked>
+          <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
+          <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
+        </fieldset>
+        <fieldset class="message__emotions">
+          <h2 class="fieldset-header">Опишите ваши эмоции:</h2>
+          <span class="placeholder">Опишите подробно все свои восторги</span>
+          <textarea class="message__letter" name="emotions"></textarea>
+        </fieldset>
+        <button type="submit" class="button">Отправить отзыв</button>
+      </form>
+    </main>
+    <footer class="main-footer">
+      <h2 class="main-footer__tag">#VisitSedona</h2>
+      <ul class="main-footer__social social">
+        <li class="social__button">
+          <a href="#" class="social__button--t" aria-label="Twitter"></a>
+        </li>
+        <li class="social__button">
+          <a href="#" class="social__button--f" aria-label="Facebook"></a>
+        </li>
+        <li class="social__button">
+          <a href="#" class="social__button--i" aria-label="Instagram"></a>
+        </li>
+      </ul>
+      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="#" alt=""></img></a></p>
+    </footer>
+  </body>
+</html>
