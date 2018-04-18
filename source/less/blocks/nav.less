@@ -1,17 +1,26 @@
 .main-nav__list {
   list-style: none;
   padding-left: 0;
-}
-
-.site-list__item {
-  background-color: #81b3d2;
+  position: relative;
+  top: -240px;
 }
 
 .site-list__item a {
+  display: block;
+  width: 100%;
+  background-color: #81b3d2;
   text-decoration: none;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 900;
   font-size: 18px;
   text-transform: uppercase;
   color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  &:hover {
+    background-color: #669ec0;
+  }
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
