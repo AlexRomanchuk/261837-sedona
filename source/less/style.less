@@ -1,40 +1,5 @@
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff2") format("woff2");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff") format("woff");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff2") format("woff2");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff") format("woff");
-  font-weight: 900;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  z-index: -1;
-}
-
-body {
-  max-width: 320px;
-}
-
+@import "../less/fonts.less";
+@import "../less/globals.less";
 @import "../less/blocks/header.less";
 @import "../less/blocks/nav.less";
 @import "../less/blocks/main.less";
