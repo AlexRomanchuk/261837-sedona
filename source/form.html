@@ -39,7 +39,7 @@
       </section>
       <form method="POST" class="message" action="https://echo.htmlacademy.ru">
         <fieldset class="message__user">
-          <h2 class="fieldset-header">Представьтесь:</h2>
+          <h2 class="message__header">Представьтесь:</h2>
           <label class="message__label" for="I">Имя*</label>
           <input class="message__input" type="text" id="I" name="I">
           <label class="message__label" for="F">Фамилия*</label>
@@ -48,14 +48,14 @@
           <input class="message__input" type="text" id="O" name="O">
         </fieldset>
         <fieldset class="message__contacts">
-          <h2 class="fieldset-header">Контактная информация:</h2>
+          <h2 class="message__header">Контактная информация:</h2>
           <label class="message__label" for="email">Электронная почта*</label>
           <input class="message__input message__input--email" type="email" id="email" name="email">
           <label class="message__label" for="phone">Контактный телефон*</label>
           <input class="message__input message__input--phone" type="phone" id="phone" name="phone">
         </fieldset>
         <fieldset class="message__impression">
-          <h2 class="fieldset-header">Ваше общее впечатление:</h2>
+          <h2 class="message__header">Ваше общее впечатление:</h2>
           <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
           <input class="visually-hidden" type="radio" id="ok" name="impression" checked>
           <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
@@ -64,7 +64,7 @@
           <input class="visually-hidden" type="radio" id="no-response" name="impression">
         </fieldset>
         <fieldset class="message__objects">
-          <h2 class="fieldset-header">Посещенные достопримечательности:</h2>
+          <h2 class="message__header">Посещенные достопримечательности:</h2>
           <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
           <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
           <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
@@ -75,7 +75,7 @@
           <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
         </fieldset>
         <fieldset class="message__emotions">
-          <h2 class="fieldset-header">Опишите ваши эмоции:</h2>
+          <h2 class="message__header">Опишите ваши эмоции:</h2>
           <span class="placeholder">Опишите подробно все свои восторги</span>
           <textarea class="message__letter" name="emotions"></textarea>
         </fieldset>
@@ -99,12 +99,12 @@
     </footer>
     <div class="modal modal--success">
       <h2 class="modal__header">Ваш отзыв отправлен!</h2>
-      <p class="modal-info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <p class="modal__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <button type="button" class="button">Закрыть окно</button>
     </div>
     <div class="modal modal--failure">
       <h2 class="modal__header">Что-то пошло не так!</h2>
-      <p class="modal-info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
+      <p class="modal__info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
       <button type="button" class="button">Ок</button>
     </div>
   </body>
