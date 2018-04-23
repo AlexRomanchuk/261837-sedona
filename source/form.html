@@ -40,7 +40,7 @@
       </section>
       <form method="POST" class="message" action="https://echo.htmlacademy.ru">
         <fieldset class="message__user">
-          <h2 class="message__header">Представьтесь:</h2>
+          <h2 class="message__header message__header--user">Представьтесь:</h2>
           <label class="message__label">
             Имя*
             <input class="message__input" type="text" id="I" name="I">
@@ -57,18 +57,18 @@
         <fieldset class="message__contacts">
           <h2 class="message__header">Контактная информация:</h2>
           <div class="message__wrapper">
-            <label class="message__label">
+            <label class="message__label message__label--contacts">
               Электронная почта*
               <input class="message__input message__input--email" type="email" id="email" name="email">
             </label>
-            <label class="message__label">
+            <label class="message__label message__label--contacts">
               Контактный телефон*
               <input class="message__input message__input--phone" type="phone" id="phone" name="phone">
             </label>
           </div>
         </fieldset>
         <fieldset class="message__impression">
-          <h2 class="message__header">Ваше общее впечатление:</h2>
+          <h2 class="message__header message__header--impression">Ваше общее впечатление:</h2>
           <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
           <input class="visually-hidden" type="radio" id="ok" name="impression" checked>
           <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
