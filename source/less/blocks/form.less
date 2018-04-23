@@ -12,6 +12,9 @@
   font-weight: 400;
   text-transform: uppercase;
   font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 58px;
 }
 
 .message__input {
@@ -37,7 +40,7 @@
     margin-left: 60px;
     margin-right: 60px;
   }
-  
+
   .message__header {
     text-align: center;
   }
@@ -45,6 +48,11 @@
   .message__user .message__header,
   .message__impression .message__header {
     text-align: left;
+  }
+
+  .message__wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .message__impression,
@@ -55,7 +63,7 @@
   .message__impression {
     order: -1;
   }
- 
+
   .message__contacts .message__label {
     flex-direction: column;
   }
@@ -100,11 +108,17 @@
     margin-left: 60px;
     margin-right: 60px;
   }
-  
+
+  .message__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   .message__contacts {
     flex-direction: row;
   }
-  
+
   .message__contacts .message__label {
     flex-direction: row;
     width: 50%;
@@ -112,7 +126,8 @@
 
   .message__input {
     &--email, &--phone {
-      width: 20%;
+      margin-left: 20px;
+      width: 60%;
     }
   }
 
