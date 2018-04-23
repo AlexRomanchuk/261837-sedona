@@ -17,6 +17,10 @@
   line-height: 58px;
 }
 
+.message__contacts .message__label {
+  flex-direction: column;
+}
+
 .message__input {
   border: none;
   height: 58px;
@@ -64,10 +68,6 @@
     order: -1;
   }
 
-  .message__contacts .message__label {
-    flex-direction: column;
-  }
-
   .message__contacts,
   .message__emotions,
   .message__objects {
@@ -87,7 +87,8 @@
   .message__input {
     margin-left: 20px;
 
-    &--email, &--phone {
+    &--email,
+    &--phone {
       margin: 0;
       width: 100%;
     }
@@ -125,7 +126,8 @@
   }
 
   .message__input {
-    &--email, &--phone {
+    &--email,
+    &--phone {
       margin-left: 20px;
       width: 60%;
     }
