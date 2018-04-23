@@ -4,3 +4,16 @@
   position: relative;
   top: -240px;
 }
+
+@media (min-width: @tablet-width) {
+  .main-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: -100px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

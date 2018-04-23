@@ -21,3 +21,42 @@
     color: #ffffff;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .slide {
+    width: 256px;
+
+    &--super {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    &--super:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .slide__header {
+    &--super {
+      width: 256px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slide {
+    width: 400px;
+
+    &--super {
+      width: 100%;
+    }
+  }
+
+  .slide__header {
+    &--super {
+      width: 400px;
+    }
+  }
+}
