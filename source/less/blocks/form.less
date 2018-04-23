@@ -57,6 +57,11 @@
   .message__wrapper {
     display: flex;
     flex-direction: column;
+
+    &--objects {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   .message__impression,
@@ -96,7 +101,7 @@
 
   .message__label {
     &--checkbox {
-      width: 20%;
+      width: 50%;
     }
   }
 }
@@ -136,5 +141,11 @@
   .message__objects {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .message__label {
+    &--checkbox {
+      width: 25%;
+    }
   }
 }
