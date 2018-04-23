@@ -15,10 +15,10 @@
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 58px;
-}
 
-.message__contacts .message__label {
-  flex-direction: column;
+  &--contacts {
+    flex-direction: column;
+  }
 }
 
 .message__input {
@@ -47,11 +47,11 @@
 
   .message__header {
     text-align: center;
-  }
 
-  .message__user .message__header,
-  .message__impression .message__header {
-    text-align: left;
+    &--impression,
+    &--user {
+      text-align: left;
+    }
   }
 
   .message__wrapper {
@@ -94,7 +94,6 @@
 
     &--email,
     &--phone {
-      margin: 0;
       width: 100%;
     }
   }
@@ -125,9 +124,15 @@
     flex-direction: row;
   }
 
-  .message__contacts .message__label {
-    flex-direction: row;
-    width: 50%;
+  .message__label {
+    &--contacts {
+      flex-direction: row;
+      width: 50%;
+    }
+
+    &--checkbox {
+      width: 25%;
+    }
   }
 
   .message__input {
@@ -141,11 +146,5 @@
   .message__objects {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .message__label {
-    &--checkbox {
-      width: 25%;
-    }
   }
 }
