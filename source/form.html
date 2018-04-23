@@ -56,14 +56,16 @@
         </fieldset>
         <fieldset class="message__contacts">
           <h2 class="message__header">Контактная информация:</h2>
-          <label class="message__label">
-            Электронная почта*
-            <input class="message__input message__input--email" type="email" id="email" name="email">
-          </label>
-          <label class="message__label">
-            Контактный телефон*
-            <input class="message__input message__input--phone" type="phone" id="phone" name="phone">
-          </label>
+          <div class="message__wrapper">
+            <label class="message__label">
+              Электронная почта*
+              <input class="message__input message__input--email" type="email" id="email" name="email">
+            </label>
+            <label class="message__label">
+              Контактный телефон*
+              <input class="message__input message__input--phone" type="phone" id="phone" name="phone">
+            </label>
+          </div>
         </fieldset>
         <fieldset class="message__impression">
           <h2 class="message__header">Ваше общее впечатление:</h2>
@@ -76,14 +78,16 @@
         </fieldset>
         <fieldset class="message__objects">
           <h2 class="message__header">Посещенные достопримечательности:</h2>
-          <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
-          <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
-          <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
-          <input class="visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" checked>
-          <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
-          <input class="visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" checked>
-          <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
-          <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
+          <div class="message__wrapper">
+            <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
+            <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
+            <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
+            <input class="visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" checked>
+            <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
+            <input class="visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" checked>
+            <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
+            <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
+          </div>
         </fieldset>
         <fieldset class="message__emotions">
           <h2 class="message__header">Опишите ваши эмоции:</h2>
@@ -111,12 +115,12 @@
     <div class="modal modal--success">
       <h2 class="modal__header">Ваш отзыв отправлен!</h2>
       <p class="modal__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button type="button" class="button">Закрыть окно</button>
+      <button type="button" class="button button--modal">Закрыть окно</button>
     </div>
     <div class="modal modal--failure">
       <h2 class="modal__header">Что-то пошло не так!</h2>
       <p class="modal__info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
-      <button type="button" class="button">Ок</button>
+      <button type="button" class="button button--modal">Ок</button>
     </div>
   </body>
 </html>
