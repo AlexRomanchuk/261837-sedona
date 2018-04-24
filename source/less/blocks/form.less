@@ -1,8 +1,10 @@
 .message__header {
+  text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 18px;
+  margin: 0;
 }
 
 .message__label {
@@ -15,10 +17,17 @@
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 58px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   &--contacts {
+    margin: 0;
     flex-direction: column;
   }
+}
+
+.message__contacts {
+  padding-bottom: 20px;
 }
 
 .message__input {
@@ -26,7 +35,14 @@
   height: 58px;
   width: 100%;
   background-color: #eeeeee;
-  margin: 0;
+  margin-left: 19px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 900;
+
+  &--phone,
+  &--email {
+    margin-left: 0;
+  }
 }
 
 .message__letter {
@@ -46,8 +62,6 @@
   }
 
   .message__header {
-    text-align: center;
-
     &--impression,
     &--user {
       text-align: left;
