@@ -12,23 +12,21 @@
         <img class="main-header__logo-image" src="#" width="100" height="100" alt="">
       </a>
       <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
-            </li>
-            <li class="site-list__item site-list__item--current">
-              <a href="#">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item site-list__item--current">
+            <a href="#">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main class="page-main">
@@ -94,7 +92,10 @@
           <span class="placeholder">Опишите подробно все свои восторги</span>
           <textarea class="message__letter" name="emotions"></textarea>
         </fieldset>
-        <button type="submit" class="button">Отправить отзыв</button>
+        <div class="message__wrapper">
+          <button type="submit" class="button">Отправить отзыв</button>
+          <span class="message__required">* — обязательные поля</span>
+        </div>
       </form>
     </main>
     <footer class="main-footer">
