@@ -36,6 +36,11 @@
     margin-bottom: 0;
   }
 
+  &--radio,
+  &--checkbox {
+    cursor: pointer;
+  }
+
   &--radio {
     text-transform: none;
     font-weight: 900;
@@ -58,7 +63,7 @@
   }
 }
 
-input[type="radio"]:checked ~ .message__label--radio::before {
+#ok:checked + .message__label--radio[for="ok"]::before {
   background-color: #333333;
 }
 
@@ -84,10 +89,11 @@ input[type="radio"]:checked ~ .message__label--radio::before {
 }
 
 .message__letter {
-  width: 280px;
-  height: 160px;
+  width: 275px;
+  height: 155px;
   border: none;
   background-color: #eeeeee;
+  margin-left: 20px;
 }
 
 .message__required {
