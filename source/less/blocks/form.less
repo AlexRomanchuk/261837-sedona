@@ -1,3 +1,8 @@
+.message {
+  margin-top: -5px;
+  margin-bottom: 50px;
+}
+
 .message__header {
   text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -5,6 +10,12 @@
   text-transform: uppercase;
   font-size: 18px;
   margin: 0;
+  margin-bottom: 25px;
+
+  &--impression {
+    margin-top: 25px;
+    margin-bottom: 48px;
+  }
 }
 
 .message__label {
@@ -14,16 +25,41 @@
   font-weight: 400;
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 18px 20px 18px 20px;
   line-height: 58px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 
   &--contacts {
-    margin: 0;
+    margin-left: 40px;
     flex-direction: column;
+    line-height: 25px;
+    margin-top: 14px;
+    margin-bottom: 0;
   }
+
+  &--radio {
+    text-transform: none;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 12px;
+  }
+
+  &--radio::before {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    border: 20px solid #eeeeee;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    position: relative;
+    bottom: 28px;
+  }
+}
+
+input[type="radio"]:checked ~ .message__label--radio::before {
+  background-color: #333333;
 }
 
 .message__contacts {
@@ -38,10 +74,12 @@
   margin-left: 19px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 900;
+  padding-left: 20px;
 
   &--phone,
   &--email {
-    margin-left: 0;
+    margin-left: -20px;
+    margin-top: 5px;
   }
 }
 
@@ -50,6 +88,14 @@
   height: 160px;
   border: none;
   background-color: #eeeeee;
+}
+
+.message__required {
+  display: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +122,11 @@
       flex-direction: row;
       flex-wrap: wrap;
     }
+  }
+
+  .message__required {
+    display: inline-block;
+    vertical-align: baseline;
   }
 
   .message__impression,
