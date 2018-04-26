@@ -67,29 +67,29 @@
         </fieldset>
         <fieldset class="message__impression">
           <h2 class="message__header message__header--impression">Ваше общее впечатление:</h2>
-          <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
           <input class="visually-hidden" type="radio" id="ok" name="impression" checked>
-          <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
+          <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
           <input class="visually-hidden" type="radio" id="no" name="impression">
-          <label class="message__label message__label--radio" for="no-response">Затрудняюсь ответить</label>
+          <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
           <input class="visually-hidden" type="radio" id="no-response" name="impression">
+          <label class="message__label message__label--radio" for="no-response">Затрудняюсь ответить</label>
         </fieldset>
         <fieldset class="message__objects">
-          <h2 class="message__header">Посещенные достопримечательности:</h2>
+          <h2 class="message__header message__header--objects">Посещенные достопримечательности:</h2>
           <div class="message__wrapper message__wrapper--objects">
-            <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
             <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
-            <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
+            <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
             <input class="visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" checked>
-            <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
+            <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
             <input class="visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" checked>
-            <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
+            <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
             <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
+            <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
           </div>
         </fieldset>
         <fieldset class="message__emotions">
           <h2 class="message__header">Опишите ваши эмоции:</h2>
-          <textarea class="message__letter" name="emotions" value="Опишите подробно все свои восторги"></textarea>
+          <textarea class="message__letter" name="emotions">Опишите подробно все свои восторги</textarea>
         </fieldset>
         <div class="message__wrapper">
           <button type="submit" class="button">Отправить отзыв</button>
