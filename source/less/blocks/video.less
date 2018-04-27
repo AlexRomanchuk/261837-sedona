@@ -1,8 +1,52 @@
 .video {
-  width: 280px;
-  height: 170px;
+  .flex(row, center);
+  width: 320px;
+  height: 201px;
   background-image: url("../img/video-mobile@1x.jpg");
+  background-repeat: no-repeat;
   text-align: center;
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.video__pult {
+  .flex(row, center);
+  width: 280px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+}
+
+.video__line {
+  .flex(row, left);
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  top: 22px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+    top: -4px;
+    left: 30px;
+  }
+}
+
+.video__controls {
+  width: 280px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: -70px;
+  background-color: #f2f2f2;
 }
 
 @media (min-width: @tablet-width) {
