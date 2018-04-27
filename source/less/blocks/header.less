@@ -1,31 +1,30 @@
-.main-header {
+.main-header__back {
   position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-color: #81b3d2;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 280px;
   margin-bottom: -7px;
   height: 157px;
 
-  &--main-page {
+  &--main {
     min-height: 387px;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .main-header {
+  .main-header__back {
     width: @tablet-width;
-    margin-top: 55px;
+    background-size: cover;
 
-    &--main-page {
+    &--main {
       min-height: 515px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-header {
+  .main-header__back {
     width: @desktop-width;
     margin-top: 60px;
   }
