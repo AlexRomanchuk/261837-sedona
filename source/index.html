@@ -11,25 +11,35 @@
       <nav class="main-nav">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a href="#">Главная</a>
+          <li>
+            <ul class="main-nav__wrapper main-nav__wrapper--left">
+              <li>
+                <a href="index.html" class="site-list__item site-list__item--first">Главная</a>
+              </li>
+              <li>
+                <a href="#" class="site-list__item site-list__item--photo">Фото и видео</a>
+              </li>
+            </ul>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+          <li>
+            <ul class="main-nav__wrapper main-nav__wrapper--right">
+              <li>
+                <a href="form.html" class="site-list__item site-list__item--form">Форма отзыва</a>
+              </li>
+              <li>
+                <a href="#" class="site-list__item site-list__item__last">HTML Academy</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <div class="main-header__menu">
+        <a class="main-header__logo" href="#">
+          <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" width="100" height="100" alt="">
+        </a>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      </div>
       <div class="main-header__back main-header__back--main"></div>
-      <a href="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="#" width="100" height="100" alt="">
-      </a>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Главная страница</h1>
@@ -53,14 +63,17 @@
               <div class="slider__more more">
                 <ul class="more__list">
                   <li class="more__item">
+                    <img class="more__img" src="img/icon-house.svg" width="70" height="70">
                     <h3 class="more__head">Жилье</h3>
                     <p class="more__info more__info--apartments">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </li>
-                  <li class="more__item">
+                  <li class="more__item more__item--souvenirs">
+                    <img class="more__img" src="img/icon-gift.svg" width="70" height="70">
                     <h3 class="more__head">Сувениры</h3>
-                    <p class="more__info more__info--suvenirs">Не только китайского, но и местного производства!</p>
+                    <p class="more__info more__info--souvenirs">Не только китайского, но и местного производства!</p>
                   </li>
                   <li class="more__item">
+                    <img class="more__img" src="img/icon-burger.svg" width="70" height="70">
                     <h3 class="more__head">Еда</h3>
                     <p class="more__info more__info--food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>
@@ -103,7 +116,7 @@
       </section>
       <section class="interest">
         <h2 class="interest__header">Заинтересовались?</h2>
-        <p class="interest__info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
+        <p class="interest__info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
         <a href="#" class="button">Найти гостиницу</a>
       </section>
       <section class="page-main__map">

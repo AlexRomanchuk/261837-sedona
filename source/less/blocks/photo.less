@@ -33,6 +33,7 @@
 
 @media (min-width: @tablet-width) {
   .photo {
+    position: relative;
     width: 50%;
     padding: 0;
     height: 347px;
@@ -46,11 +47,14 @@
   }
 
   .photo__controls {
-    .flex(row, space-between)
+    .flex(row, space-between);
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
   }
 
   .photo__name {
-    .flex(column, left)
+    .flex(column, left);
   }
 
   .photo__image {
@@ -71,7 +75,6 @@
 
 @media (min-width: @desktop-width) {
   .photo {
-    position: relative;
     width: 33.3%;
     height: 270px;
 
@@ -82,8 +85,6 @@
   }
 
   .photo__controls {
-    position: absolute;
-    width: 100%;
     bottom: 0;
   }
 

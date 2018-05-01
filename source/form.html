@@ -11,54 +11,64 @@
       <nav class="main-nav">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
+          <li>
+            <ul class="main-nav__wrapper main-nav__wrapper--left">
+              <li>
+                <a href="index.html" class="site-list__item site-list__item--first">Главная</a>
+              </li>
+              <li>
+                <a href="photo.html" class="site-list__item site-list__item--photo">Фото и видео</a>
+              </li>
+            </ul>
           </li>
-          <li class="site-list__item">
-            <a href="photo.html">Фото и видео</a>
-          </li>
-          <li class="site-list__item site-list__item--current">
-            <a href="#">Форма отзыва</a>
-          </li>
-          <li class="site-list__item">
-            <a href="#">HTML Academy</a>
+          <li>
+            <ul class="main-nav__wrapper main-nav__wrapper--right">
+              <li>
+                <a href="#" class="site-list__item site-list__item--form">Форма отзыва</a>
+              </li>
+              <li>
+                <a href="#" class="site-list__item site-list__item--last">HTML Academy</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <div class="main-header__menu">
+        <a class="main-header__logo" href="#">
+          <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" width="100" height="100" alt="">
+        </a>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      </div>
       <div class="main-header__back"></div>
-      <a href="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="#" width="100" height="100" alt="">
-      </a>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Отзыв</h1>
       <section class="intro">
         <img src="#" class="intro__logo" alt="">
-        <h2 class="intro__header">Оставьте свай отзыв</h2>
-        <p class="intro__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <h2 class="intro__header">Оставьте свой отзыв</h2>
+        <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form method="POST" class="message" action="https://echo.htmlacademy.ru">
         <fieldset class="message__user">
           <h2 class="message__header message__header--user">Представьтесь:</h2>
           <label class="message__label">
             Имя*:
-            <input class="message__input" type="text" id="I" name="I" value="Петр">
+            <input class="message__input message__input--user" type="text" id="I" name="I" value="Петр">
           </label>
           <label class="message__label">
             Фамилия*:
-            <input class="message__input" type="text" id="F" name="F" value="Иванов">
+            <input class="message__input message__input--user" type="text" id="F" name="F" value="Иванов">
           </label>
           <label class="message__label">
             Отчество:
-            <input class="message__input" type="text" id="O" name="O" value="Александрович">
+            <input class="message__input message__input--user" type="text" id="O" name="O" value="Александрович">
           </label>
         </fieldset>
         <fieldset class="message__contacts">
           <h2 class="message__header message__header--contacts">Контактная информация:</h2>
-          <div class="message__wrapper">
+          <div class="message__wrapper message__wrapper--contacts">
             <label class="message__label message__label--contacts">
-              Контактный телефон*:
+              <span class="message__word"><span class="message__word message__word--hidden">Контактный&nbsp;</span>телефон*:</span>
               <input class="message__input message__input--phone" type="phone" id="phone" name="phone" value="Введите телефон">
             </label>
             <label class="message__label message__label--contacts">
@@ -93,8 +103,8 @@
           <h2 class="message__header">Опишите ваши эмоции:</h2>
           <textarea class="message__letter" name="emotions">Опишите подробно все свои восторги</textarea>
         </fieldset>
-        <div class="message__wrapper">
-          <button type="submit" class="button">Отправить отзыв</button>
+        <div class="message__wrapper message__wrapper--submit">
+          <button type="submit" class="button button--submit">Отправить отзыв</button>
           <span class="message__required">* — обязательные поля</span>
         </div>
       </form>
