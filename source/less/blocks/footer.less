@@ -19,6 +19,7 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 34px;
+  justify-content: center;
 }
 
 .main-footer__social {
@@ -29,7 +30,7 @@
   flex-direction: row;
   justify-content: center;
 }
-  
+
 .main-footer__copyright img {
   margin-left: 10px;
   line-height: 34px;
@@ -48,9 +49,22 @@
 
   .main-footer__tag {
     margin-top: 30px;
+    margin-left: 5px;
   }
-  
+
   .main-footer__copyright {
-    margin-top: 30px;
+    margin-top: 27px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__tag {
+    margin-left: -10px;
+  }
+
+  .main-footer__copyright {
+    margin-top: 25px;
+    margin-right: -10px;
   }
 }

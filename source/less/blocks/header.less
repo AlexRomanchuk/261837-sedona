@@ -1,4 +1,9 @@
+.main-header {
+  position: relative;
+}
+
 .main-header__back {
+  width: 318px;
   position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-color: #81b3d2;
@@ -7,13 +12,43 @@
   margin-bottom: -7px;
   height: 157px;
   margin-top: 30px;
+  margin-left: 1px;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/bg-intro-triangle-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    bottom: 0;
+  }
 
   &--main {
     min-height: 387px;
   }
 }
 
+.main-header__menu {
+  position: relative;
+}
+
+.main-header__logo-image {
+  position: absolute;
+  top: -10px;
+  left: 110px;
+  z-index: 1;
+}
+
 @media (min-width: @tablet-width) {
+  .main-header__menu {
+    position: absolute;
+    left: 223px;
+    top: 0;
+  }
+
   .main-header__back {
     width: @tablet-width;
     margin-top: 0;
@@ -23,10 +58,18 @@
     &--main {
       min-height: 518px;
     }
+
+    &::after {
+      height: 46px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-header__menu {
+    left: 440px;
+  }
+
   .main-header__back {
     width: @desktop-width;
     height: 300px;

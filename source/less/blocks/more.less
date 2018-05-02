@@ -3,6 +3,19 @@
   margin-bottom: 37px;
 }
 
+.more__item {
+  width: 33.3%;
+  position: relative;
+}
+
+.more__img {
+  position: absolute;
+  left: -57px;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+}
+
 .more__list {
   list-style: none;
   padding: 0;
@@ -36,15 +49,36 @@
     margin-left: 0;
   }
 
+  .more__img {
+    position: static;
+    width: 75px;
+    height: 75px;
+    margin: 26px auto 23px auto;
+  }
+
   .more__item {
     display: flex;
     flex-direction: column;
     text-align: center;
     min-height: 295px;
+
+    &--souvenirs {
+      order: 1;
+    }
+  }
+
+  .more__head {
+    margin-bottom: 20px;
+    font-size: 22px;
   }
 
   .more__info {
     padding-left: 50px;
     padding-right: 50px;
+
+    &--souvenirs {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
   }
 }

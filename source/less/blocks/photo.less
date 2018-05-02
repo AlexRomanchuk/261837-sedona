@@ -33,6 +33,7 @@
 
 @media (min-width: @tablet-width) {
   .photo {
+    position: relative;
     width: 50%;
     padding: 0;
     height: 347px;
@@ -46,16 +47,23 @@
   }
 
   .photo__controls {
-    .flex(row, space-between)
+    .flex(row, space-between);
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
   }
 
   .photo__name {
-    .flex(column, left)
+    .flex(column, left);
   }
 
   .photo__image {
     margin: 0;
     height: 267px;
+  }
+
+  .photo__header {
+    margin-top: 13px;
   }
 
   .photo__header,
@@ -71,7 +79,6 @@
 
 @media (min-width: @desktop-width) {
   .photo {
-    position: relative;
     width: 33.3%;
     height: 270px;
 
@@ -82,20 +89,30 @@
   }
 
   .photo__controls {
-    position: absolute;
-    width: 100%;
     bottom: 0;
   }
 
   .photo__image {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 99%;
+
+    &--first {
+      height: 100%;
+    }
   }
 
   .photo__header,
   .photo__author,
   .photo__like {
     color: #ffffff;
+  }
+
+  .photo__header {
+    margin-top: 6px;
+
+    &--first {
+      margin-top: 8px;
+    }
   }
 }
