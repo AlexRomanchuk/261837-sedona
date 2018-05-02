@@ -2,4 +2,27 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: -5px;
+}
+
+.gallery__photo {
+  padding-left: 20px;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    width: 648px;
+    margin-left: 60px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 27px;
+  }
 }

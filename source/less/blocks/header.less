@@ -1,23 +1,34 @@
-.main-header {
+.main-header__back {
   position: relative;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-color: #81b3d2;
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 290px;
-  min-height: 380px;
+  margin-bottom: -7px;
+  height: 157px;
+  margin-top: 30px;
+
+  &--main {
+    min-height: 387px;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  .main-header {
+  .main-header__back {
     width: @tablet-width;
-    margin-top: 60px;
+    margin-top: 0;
+    background-size: cover;
+    height: 290px;
+
+    &--main {
+      min-height: 518px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-header {
+  .main-header__back {
     width: @desktop-width;
-    margin-top: 60px;
+    height: 300px;
   }
 }

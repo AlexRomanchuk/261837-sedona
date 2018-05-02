@@ -1,22 +1,68 @@
 .interest {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .interest__header {
+  margin-top: 5px;
   font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
+  letter-spacing: -0.02em;
+
+  &--video {
+    font-size: 19px;
+  }
 }
 
 .interest__info {
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: 24px;
+  margin-bottom: 35px;
+
+  &--video {
+    padding-left: 20px;
+    padding-right: 20px;
+	  margin-top: 28px;
+	  letter-spacing: -0.03em;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .interest {
+    margin-bottom: 55px;
+  }
+
   .interest__header {
-    font-size: 30px;
+    font-size: 28px;
+    font-weight: 900;
+    margin-top: 35px;
+  }
+
+  .interest__info {
+    padding-left: 130px;
+    padding-right: 130px;
+    margin-bottom: 45px;
+
+    &--video {
+      margin-top: 25px;
+      margin-bottom: 75px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .interest {
+    margin-bottom: 67px;
+
+    &--video {
+      margin-bottom: 97px;
+    }
+  }
+
+  .interest__info {
+    padding-left: 360px;
+    padding-right: 360px;
   }
 }

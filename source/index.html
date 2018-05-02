@@ -7,43 +7,43 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header main-header--main-page">
+      <nav class="main-nav">
+        <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--current">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <div class="main-header__back main-header__back--main"></div>
       <a href="main-header__logo" href="#">
         <img class="main-header__logo-image" src="#" width="100" height="100" alt="">
       </a>
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
-              <a href="#">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="photo.html">Фото и видео</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Главная страница</h1>
       <section class="intro">
         <img src="#" class="intro__logo" alt="">
-        <h2 class="intro__header">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
-        <p class="intro__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <h2 class="intro__header intro__header--main">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="intro__description intro__description--main">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <section class="features">
         <div class="features__wrapper slider">
           <ul class="features__list slider__list">
             <li class="features__item slider__item slide slide--super">
               <div class="slide__header slide__header--super">
-                <h2 class="slide__head">Настоящий городок</h2>
+                <h2 class="slide__head slide__head--super">Настоящий городок</h2>
                 <span class="slide__number">№ 1</span>
                 <p class="slide__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
@@ -52,24 +52,24 @@
               </div>
               <div class="slider__more more">
                 <ul class="more__list">
-                  <li class="more-list__item">
+                  <li class="more__item">
                     <h3 class="more__head">Жилье</h3>
-                    <p class="more__info">Рекомендуется пожить в настоящем мотеле, все как в кино!</p>
+                    <p class="more__info more__info--apartments">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </li>
-                  <li class="more-list__item">
+                  <li class="more__item">
                     <h3 class="more__head">Сувениры</h3>
-                    <p class="more__info">Не только китайского, но и местного производства!</p>
+                    <p class="more__info more__info--suvenirs">Не только китайского, но и местного производства!</p>
                   </li>
-                  <li class="more-list__item">
+                  <li class="more__item">
                     <h3 class="more__head">Еда</h3>
-                    <p class="more__info">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                    <p class="more__info more__info--food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="features__item slider__item slide slide--super">
               <div class="slide__header slide__header--super">
-                <h2 class="slide__head">Там есть Мост Дьявола</h2>
+                <h2 class="slide__head slide__head--super">Там есть Мост Дьявола</h2>
                 <span class="slide__number">№ 2</span>
                 <p class="slide__description">По нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
@@ -103,7 +103,7 @@
       </section>
       <section class="interest">
         <h2 class="interest__header">Заинтересовались?</h2>
-        <p class="interest__info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
+        <p class="interest__info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
         <a href="#" class="button">Найти гостиницу</a>
       </section>
       <section class="page-main__map">
@@ -122,7 +122,7 @@
           <a href="#" class="social__link social__link--i" aria-label="Instagram"></a>
         </li>
       </ul>
-      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="#" alt=""></img></a></p>
+      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt=""></a></p>
     </footer>
   </body>
 </html>
