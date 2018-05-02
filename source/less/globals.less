@@ -8,6 +8,8 @@
 }
 
 body {
+  width: 100%;
+  margin: 0 auto;
   max-width: 320px;
 }
 
@@ -17,16 +19,19 @@ fieldset {
   flex-direction: column;
   padding: 0;
   margin: 0;
+  border-top: 2px solid #eeeeee;
+  padding-bottom: 20px;
 }
 
 @media (min-width: @tablet-width) {
   body {
-    min-width: @tablet-width;
+    max-width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
   body {
-    min-width: @desktop-width;
+    max-width: @desktop-width;
+    padding: 0 40px;
   }
 }

@@ -1,22 +1,83 @@
 .interest {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .interest__header {
+  margin-top: 5px;
   font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
+  letter-spacing: -0.02em;
+
+  &--video {
+    font-size: 19px;
+  }
 }
 
 .interest__info {
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   line-height: 24px;
+  margin-bottom: 35px;
+
+  &--video {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 28px;
+    letter-spacing: -0.03em;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .interest {
+    margin-bottom: 55px;
+
+    &--video {
+      margin-bottom: 57px;
+    }
+  }
+
   .interest__header {
-    font-size: 30px;
+    font-size: 31px;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 23px;
+  }
+
+  .interest__info {
+    padding-left: 130px;
+    padding-right: 130px;
+    margin-bottom: 43px;
+
+    &--video {
+      margin-top: 25px;
+      margin-bottom: 72px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .interest {
+    margin-bottom: 67px;
+
+    &--video {
+      margin-bottom: 101px;
+    }
+  }
+
+  .interest__info {
+    padding-left: 360px;
+    padding-right: 360px;
+
+    &--main {
+      padding-left: 330px;
+      padding-right: 330px;
+      margin-bottom: 47px;
+    }
+
+    &--video {
+      margin-bottom: 70px;
+    }
   }
 }

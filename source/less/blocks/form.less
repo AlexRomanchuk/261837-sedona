@@ -1,8 +1,26 @@
+.message {
+  margin-top: -5px;
+  margin-bottom: 55px;
+}
+
 .message__header {
+  text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 18px;
+  margin: 0;
+  margin-bottom: 25px;
+
+  &--impression {
+    margin-top: 25px;
+    margin-bottom: 45px;
+  }
+
+  &--objects {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 }
 
 .message__label {
@@ -12,28 +30,152 @@
   font-weight: 400;
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 18px 20px 18px 20px;
   line-height: 58px;
 
   &--contacts {
+    margin-left: 40px;
     flex-direction: column;
+    line-height: 25px;
+    margin-top: 14px;
+    margin-bottom: 0;
   }
+
+  &--radio,
+  &--checkbox {
+    cursor: pointer;
+    text-transform: none;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  &--radio {
+    margin-top: 0;
+    line-height: 12px;
+    margin-bottom: 14px;
+  }
+
+  &--checkbox {
+    margin-top: 5px;
+    margin-bottom: 22px;
+    position: relative;
+  }
+
+  &--radio::before {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    border: 17px solid #eeeeee;
+    background-color: #eeeeee;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    position: relative;
+    bottom: 24px;
+    margin-right: 21px;
+  }
+
+  &--checkbox::before {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    background-color: #eeeeee;
+    width: 56px;
+    height: 56px;
+    margin-right: 23px;
+  }
+
+  &--checkbox::after {
+    content: "";
+    display: none;
+    width: 18px;
+    height: 9px;
+    background-color: transparent;
+    border-left: 4px solid #000000;
+    border-bottom: 4px solid #000000;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+
+  &--radio:hover::before {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+  }
+
+  &--radio:active::before {
+    background-color: #d5d5d5;
+    border-color: #d5d5d5;
+  }
+}
+
+input[type="radio"]:checked + .message__label--radio::before {
+  background-color: #333333;
+}
+
+input[type="radio"]:checked + .message__label--radio:active::before {
+  background-color: #a4a4a4;
+}
+
+input[type="checkbox"]:checked + .message__label--checkbox::after {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.message__impression {
+  margin-bottom: -8px;
+}
+
+.message__user {
+  padding-bottom: 25px;
+}
+
+.message__contacts {
+  padding-bottom: 20px;
 }
 
 .message__input {
   border: none;
   height: 58px;
+  line-height: 58px;
   width: 100%;
   background-color: #eeeeee;
-  margin: 0;
+  margin-left: 17px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 900;
+  padding: 0;
+  padding-left: 20px;
+  font-size: 18px;
+
+  &--phone,
+  &--email {
+    margin-left: -20px;
+    margin-top: 5px;
+  }
 }
 
 .message__letter {
-  width: 280px;
-  height: 160px;
+  width: 255px;
+  height: 145px;
   border: none;
   background-color: #eeeeee;
+  margin-left: 20px;
+  margin-top: -5px;
+  margin-bottom: 28px;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.message__required {
+  display: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 @media (min-width: @tablet-width) {
@@ -43,14 +185,37 @@
     flex-wrap: wrap;
     margin-left: 60px;
     margin-right: 60px;
+    margin-top: 23px;
+    margin-bottom: 12px;
   }
 
   .message__header {
-    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
 
     &--impression,
     &--user {
+      margin: 0;
+      margin-top: 5px;
       text-align: left;
+    }
+
+    &--user {
+      margin-left: 55px;
+      margin-bottom: 60px;
+    }
+
+    &--impression {
+      margin-bottom: 80px;
+    }
+
+    &--contacts {
+      margin-bottom: 27px;
+    }
+
+    &--objects {
+      padding-left: 150px;
+      padding-right: 150px;
     }
   }
 
@@ -59,14 +224,29 @@
     flex-direction: column;
 
     &--objects {
+      margin-top: 35px;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 59px;
     }
+
+    &--submit {
+      width: 100%;
+    }
+  }
+
+  .message__required {
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 63px;
   }
 
   .message__impression,
   .message__user {
     width: 50%;
+    margin-bottom: 1px;
+    padding-bottom: 20px;
   }
 
   .message__impression {
@@ -79,14 +259,22 @@
     width: 100%;
   }
 
+  .message__contacts {
+    margin-bottom: 5px;
+  }
+
   .message__objects {
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 19px;
   }
 
   .message__letter {
-    width: 100%;
-    margin-bottom: 40px;
+    width: 97%;
+    margin-left: 0;
+    margin-top: 57px;
+    margin-bottom: 35px;
   }
 
   .message__input {
@@ -95,12 +283,30 @@
     &--email,
     &--phone {
       width: 100%;
+      margin-left: -20px;
     }
   }
 
   .message__label {
+    margin-left: 55px;
+    margin-right: 0;
+
     &--checkbox {
-      width: 50%;
+      width: 44%;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    &--radio {
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
+
+    &--contacts {
+      margin-left: 20px;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 25px;
     }
   }
 }
@@ -110,28 +316,84 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 6px;
     margin-left: 60px;
     margin-right: 60px;
+    margin-bottom: 80px;
   }
 
   .message__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 60px;
+
+    &--submit {
+      width: 100%;
+      margin-right: 60px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-right: 60px;
+      justify-content: left;
+    }
   }
 
   .message__contacts {
+    margin-bottom: 0;
     flex-direction: row;
   }
 
-  .message__label {
+  .message__header {
+    font-size: 21px;
+
+    &--impression {
+      margin-left: 5px;
+      text-align: center;
+    }
+
     &--contacts {
+      margin-bottom: 67px;
+    }
+
+    &--objects {
+      padding-left: 350px;
+      padding-right: 350px;
+    }
+
+    &--user {
+      margin-left: 80px;
+    }
+  }
+
+  .message__hidden-word {
+    display: none;
+  }
+
+  .message__label {
+    margin-left: 80px;
+
+    &--contacts {
+      margin-left: 0;
       flex-direction: row;
-      width: 50%;
+      width: 45%;
+      line-height: 67px;
     }
 
     &--checkbox {
+      margin-left: 0;
       width: 25%;
+    }
+
+    &--radio {
+      margin-left: 64px;
+    }
+  }
+
+  .message__word {
+    &--hidden {
+      display: none;
     }
   }
 
@@ -139,12 +401,21 @@
     &--email,
     &--phone {
       margin-left: 20px;
-      width: 60%;
+      width: 290px;
+    }
+
+    &--user {
+      margin-right: 60px;
     }
   }
 
   .message__objects {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .message__letter {
+    width: 87%;
+    margin-left: 60px;
   }
 }
