@@ -35,16 +35,21 @@
       </nav>
       <div class="main-header__menu">
         <a class="main-header__logo" href="#">
-          <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" width="100" height="100" alt="">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+            <img class="main-header__logo-image" src="img/logo-sedona-mobile.svg" alt="">
+          </picture>
         </a>
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
-      <div class="main-header__back"></div>
+      <div class="main-header__back">
+        <img class="main-header__main-image" src="img/text-sedona.svg" alt="">
+      </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Отзыв</h1>
       <section class="intro">
-        <img src="#" class="intro__logo" alt="">
         <h2 class="intro__header">Оставьте свой отзыв</h2>
         <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
@@ -67,11 +72,11 @@
         <fieldset class="message__contacts">
           <h2 class="message__header message__header--contacts">Контактная информация:</h2>
           <div class="message__wrapper message__wrapper--contacts">
-            <label class="message__label message__label--contacts">
+            <label class="message__label message__label--contacts message__label--phone">
               <span class="message__word"><span class="message__word message__word--hidden">Контактный&nbsp;</span>телефон*:</span>
               <input class="message__input message__input--phone" type="phone" id="phone" name="phone" value="Введите телефон">
             </label>
-            <label class="message__label message__label--contacts">
+            <label class="message__label message__label--contacts message__label--email">
               Электронная почта*:
               <input class="message__input message__input--email" type="email" id="email" name="email" value="Введите e-mail">
             </label>

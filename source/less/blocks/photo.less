@@ -59,7 +59,6 @@
 
   .photo__image {
     margin: 0;
-    height: 267px;
   }
 
   .photo__header {
@@ -89,13 +88,18 @@
   }
 
   .photo__controls {
-    bottom: 0;
+    bottom: 3px;
+    padding-top: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &--first {
+      bottom: 0;
+    }
   }
 
   .photo__image {
     position: relative;
     width: 100%;
-    height: 99%;
 
     &--first {
       height: 100%;
@@ -109,10 +113,10 @@
   }
 
   .photo__header {
-    margin-top: 6px;
+    margin-top: 8px;
 
     &--first {
-      margin-top: 8px;
+      margin-top: 9px;
     }
   }
 }
