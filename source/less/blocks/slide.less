@@ -1,3 +1,11 @@
+.slide {
+  background-color: #eeeeee;
+
+  &--super {
+    background-color: #ffffff;
+  }
+}
+
 .slide__head {
   margin: 0;
   margin-bottom: 5px;
@@ -11,7 +19,7 @@
 }
 
 .slide__image {
-  height: 260px;
+  height: 256px;
 }
 
 .slide__description {
@@ -85,7 +93,8 @@
   }
 
   .slide__image {
-    height: 255px;
+    .flex(column, center);
+    overflow: hidden;
   }
 }
 
