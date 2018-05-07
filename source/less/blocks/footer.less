@@ -31,9 +31,20 @@
   justify-content: center;
 }
 
-.main-footer__copyright img {
+.main-footer__copyright-img {
+  fill: #000000;
   margin-left: 10px;
   line-height: 34px;
+  margin-top: -4px;
+
+  &:hover {
+    fill: #81b3d2;
+  }
+
+  &:active {
+    fill: #000000;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -65,6 +76,6 @@
 
   .main-footer__copyright {
     margin-top: 25px;
-    margin-right: -10px;
+    margin-right: -21px;
   }
 }

@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+      <include src="build/img/html-sprite.svg"></include>
+    </div>
     <header class="main-header">
       <nav class="main-nav">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
@@ -74,11 +78,21 @@
           <div class="message__wrapper message__wrapper--contacts">
             <label class="message__label message__label--contacts message__label--phone">
               <span class="message__word"><span class="message__word message__word--hidden">Контактный&nbsp;</span>телефон*:</span>
-              <input class="message__input message__input--phone" type="phone" id="phone" name="phone" value="Введите телефон">
+              <input class="message__input message__input--phone" type="tel" id="phone" name="phone" value="Введите телефон">
+              <div class="message__after">
+                <svg>
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
             </label>
             <label class="message__label message__label--contacts message__label--email">
               Электронная почта*:
               <input class="message__input message__input--email" type="email" id="email" name="email" value="Введите e-mail">
+              <div class="message__after message__after--email">
+                <svg>
+                  <use xlink:href="img/sprite.svg#icon-mail"></use>
+                </svg>
+              </div>
             </label>
           </div>
         </fieldset>
@@ -118,16 +132,34 @@
       <h2 class="main-footer__tag">#VisitSedona</h2>
       <ul class="main-footer__social social">
         <li class="social__button">
-          <a href="#" class="social__link social__link--t" aria-label="Twitter"></a>
+          <a href="#" class="social__link social__link--t" aria-label="Twitter">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--f" aria-label="Facebook"></a>
+          <a href="#" class="social__link social__link--f" aria-label="Facebook">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--i" aria-label="Instagram"></a>
+          <a href="#" class="social__link social__link--i" aria-label="Instagram">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt=""></a></p>
+      <p class="main-footer__copyright">
+        Разработано <a href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="main-footer__copyright-img" width="42" height="44">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
     <div class="modal modal--success">
       <h2 class="modal__header">Ваш отзыв отправлен!</h2>
