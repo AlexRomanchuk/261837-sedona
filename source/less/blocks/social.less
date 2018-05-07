@@ -1,8 +1,40 @@
 .social__button {
-  display: block;
+  .flex(row, center);
   width: 47px;
   height: 47px;
   background-color: #81b3d2;
   margin-left: 3px;
   margin-right: 3px;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--t {
+    background-image: url("../img/icon-twitter.svg");
+  }
+
+  &--f {
+    background-image: url("../img/icon-facebook.svg");
+  }
+
+  &--i {
+    background-image: url("../img/icon-youtube.svg");
+  }
 }
