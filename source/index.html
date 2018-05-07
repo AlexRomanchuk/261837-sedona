@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
+      <include src="build/img/html-sprite.svg"></include>
     </div>
     <header class="main-header main-header--main-page">
       <nav class="main-nav">
@@ -75,17 +76,23 @@
               <div class="slider__more more">
                 <ul class="more__list">
                   <li class="more__item">
-                    <img class="more__img" src="img/icon-house.svg" width="70" height="70">
+                    <svg class="more__img" width="70" height="70">
+                      <use xlink:href="#icon-house"></use>
+                    </svg>
                     <h3 class="more__head">Жилье</h3>
                     <p class="more__info more__info--apartments">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </li>
                   <li class="more__item more__item--souvenirs">
-                    <img class="more__img" src="img/icon-gift.svg" width="70" height="70">
+                    <svg class="more__img" width="70" height="70">
+                      <use xlink:href="#icon-gift"></use>
+                    </svg>
                     <h3 class="more__head">Сувениры</h3>
                     <p class="more__info more__info--souvenirs">Не только китайского, но и местного производства!</p>
                   </li>
                   <li class="more__item">
-                    <img class="more__img" src="img/icon-burger.svg" width="70" height="70">
+                    <svg class="more__img" width="70" height="70">
+                      <use xlink:href="#icon-burger"></use>
+                    </svg>
                     <h3 class="more__head">Еда</h3>
                     <p class="more__info more__info--food">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>
@@ -94,7 +101,7 @@
             </li>
             <li class="features__item slider__item slide slide--super">
               <div class="slide__header slide__header--super">
-                <h2 class="slide__head slide__head--super">Там есть Мост Дьявола</h2>
+                <h2 class="slide__head slide__head--super">Там есть Мост Дъявола</h2>
                 <span class="slide__number">№ 2</span>
                 <p class="slide__description">По нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
@@ -142,16 +149,34 @@
       <h2 class="main-footer__tag">#VisitSedona</h2>
       <ul class="main-footer__social social">
         <li class="social__button">
-          <a href="#" class="social__link social__link--t" aria-label="Twitter"></a>
+          <a href="#" class="social__link social__link--t" aria-label="Twitter">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--f" aria-label="Facebook"></a>
+          <a href="#" class="social__link social__link--f" aria-label="Facebook">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--i" aria-label="Instagram"></a>
+          <a href="#" class="social__link social__link--i" aria-label="Instagram">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt=""></a></p>
+      <p class="main-footer__copyright">
+        Разработано <a href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="main-footer__copyright-img" width="44" height="54">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
   </body>
 </html>

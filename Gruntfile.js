@@ -12,7 +12,9 @@ module.exports = function(grunt) {
           src: [
             "fonts/**/*.{woff,woff2}",
             "img/**/*.{jpg,gif,png}",
-            "img/**/htmlacademy.svg",
+            "img/**/logo-*.svg",
+            "img/**/bg-*.svg",
+            "img/**/text-*.svg",
             "js/**"
           ],
           dest: "build"
@@ -61,28 +63,17 @@ module.exports = function(grunt) {
 
     svgstore: {
       options: {
+        cleanup: ["fill"],
         includeTitleElement: false
       },
       sprite: {
         files: {
           "build/img/sprite.svg": ["source/img/icon-*.svg"],
-          "build/img/text-sprite.svg": ["source/img/text-*.svg"],
-          "build/img/bg-sprite.svg": ["source/img/bg-*.svg"]
+          "build/img/html-sprite.svg": ["source/img/htmlacademy.svg"]
         }
       }
     },
-    
-    imagemin: {
-      dinamic: {
-        files: [{
-          expand: true,
-          cwd: "build",
-          src: ["img/**/*.{png,jpg,gif}"],
-          dest: "build"
-        }]
-      }
-    },
-    
+
     cwebp: {
       dynamic: {
         options: {
@@ -149,7 +140,6 @@ module.exports = function(grunt) {
     "csso",
     "svgstore",
     "posthtml",
-    "imagemin",
     "cwebp"
   ]);
 };

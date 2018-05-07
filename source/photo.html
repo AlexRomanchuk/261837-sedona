@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+      <include src="build/img/html-sprite.svg"></include>
+    </div>
     <header class="main-header">
       <nav class="main-nav">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
@@ -117,25 +121,37 @@
         <div class="interest__video video">
           <div class="video__pult">
             <div class="video__button video__button--pult video__button--reload">
-              <img src="img/icon-video-replay.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
+              </svg>
             </div>
             <div class="video__line"></div>
             <div class="video__button video__button--pult video__button--cc">
-              <img src="img/icon-video-subtitles.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
+              </svg>
             </div>
             <div class="video__button video__button--pult video__button--scale">
-              <img src="img/icon-video-fullscreen.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+              </svg>
             </div>
           </div>
           <div class="video__controls">
             <div class="video__button video__button--reload">
-              <img src="img/icon-video-replay.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
+              </svg>
             </div>
             <div class="video__button video__button--cc">
-              <img src="img/icon-video-subtitles.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
+              </svg>
             </div>
             <div class="video__button video__button--scale">
-              <img src="img/icon-video-fullscreen.svg" alt="">
+              <svg>
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -145,16 +161,34 @@
       <h2 class="main-footer__tag">#VisitSedona</h2>
       <ul class="main-footer__social social">
         <li class="social__button">
-          <a href="#" class="social__link social__link--t" aria-label="Twitter"></a>
+          <a href="#" class="social__link social__link--t" aria-label="Twitter">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--f" aria-label="Facebook"></a>
+          <a href="#" class="social__link social__link--f" aria-label="Facebook">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
         <li class="social__button">
-          <a href="#" class="social__link social__link--i" aria-label="Instagram"></a>
+          <a href="#" class="social__link social__link--i" aria-label="Instagram">
+            <svg class="social__icon" width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-      <p class="main-footer__copyright">Разработано <a href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt=""></a></p>
+      <p class="main-footer__copyright">
+        Разработано <a href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="main-footer__copyright-img" width="44" height="54">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
     </footer>
   </body>
 </html>

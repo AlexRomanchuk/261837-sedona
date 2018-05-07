@@ -55,11 +55,17 @@
 }
 
 .video__button {
-  opacity: 0.6;
   margin-top: 14px;
+  opacity: 1;
+
+  svg {
+    width: 25px;
+    height: 20px;
+    fill: #454545;
+  }
 
   &:hover {
-    opacity: 1;
+    opacity: 0.7;
   }
 
   &:active {
@@ -103,12 +109,8 @@
       margin-left: 17px;
     }
 
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
+    svg {
+      fill: #ffffff;
     }
 
     &--cc {
