@@ -11,7 +11,8 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**",
+            "img/**/*.{jpg,gif,png}",
+            "img/**/htmlacademy.svg",
             "js/**"
           ],
           dest: "build"
@@ -40,7 +41,8 @@ module.exports = function(grunt) {
       html: {
         files: [{
           expand: true,
-          src: ["source/*.html"],
+          cwd: "source",
+          src: ["*.html"],
           dest: "build"
         }]
       }
@@ -63,8 +65,35 @@ module.exports = function(grunt) {
       },
       sprite: {
         files: {
-          "build/img/sprite.svg": ["source/img/icon-*.svg"]
+          "build/img/sprite.svg": ["source/img/icon-*.svg"],
+          "build/img/text-sprite.svg": ["source/img/text-*.svg"],
+          "build/img/bg-sprite.svg": ["source/img/bg-*.svg"]
         }
+      }
+    },
+    
+    imagemin: {
+      dinamic: {
+        files: [{
+          expand: true,
+          cwd: "build",
+          src: ["img/**/*.{png,jpg,gif}"],
+          dest: "build"
+        }]
+      }
+    },
+    
+    cwebp: {
+      dynamic: {
+        options: {
+          q: 90
+        },
+        files: [{
+          expand: true,
+          cwd: "build/",
+          src: ["img/**/*.{png,jpg,gif}"],
+          dest: "build/"
+        }]
       }
     },
 
@@ -119,6 +148,8 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "svgstore",
-    "posthtml"
+    "posthtml",
+    "imagemin",
+    "cwebp"
   ]);
 };
