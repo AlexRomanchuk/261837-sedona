@@ -1,16 +1,21 @@
 .interest {
   text-align: center;
   margin-bottom: 50px;
+
+  &--video {
+    margin-bottom: 48px;
+  }
 }
 
 .interest__header {
-  margin-top: 5px;
+  margin-top: 10px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: -0.02em;
 
   &--video {
+    margin-top: 6px;
     font-size: 19px;
   }
 }
@@ -20,21 +25,24 @@
   text-transform: uppercase;
   line-height: 24px;
   margin-bottom: 35px;
+  letter-spacing: -0.08em;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &--video {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-top: 28px;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.08em;
   }
 }
 
 @media (min-width: @tablet-width) {
   .interest {
-    margin-bottom: 55px;
+    margin-bottom: 57px;
 
     &--video {
-      margin-bottom: 57px;
+      margin-bottom: 55px;
     }
   }
 
@@ -46,11 +54,15 @@
   }
 
   .interest__info {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 150px;
+    padding-right: 150px;
     margin-bottom: 43px;
+    font-size: 14px;
+    letter-spacing: 0;
 
     &--video {
+      padding-left: 170px;
+      padding-right: 170px;
       margin-top: 25px;
       margin-bottom: 72px;
     }
@@ -77,7 +89,10 @@
     }
 
     &--video {
+      padding-left: 380px;
+      padding-right: 380px;
       margin-bottom: 70px;
+      margin-top: 23px;
     }
   }
 }

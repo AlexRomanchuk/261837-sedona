@@ -1,10 +1,14 @@
 .modal {
-  display: flex;
-  flex-direction: column;
+  display: none;
   text-align: center;
 
   &--failure {
     width: 400px;
+  }
+
+  &--open {
+    display: flex;
+    flex-direction: column;
   }
 }
 

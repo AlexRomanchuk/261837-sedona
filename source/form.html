@@ -12,7 +12,7 @@
       <include src="build/img/html-sprite.svg"></include>
     </div>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--noscript">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
           <li>
@@ -38,7 +38,7 @@
         </ul>
       </nav>
       <div class="main-header__menu">
-        <a class="main-header__logo" href="#">
+        <a class="main-header__logo" href="index.html">
           <picture>
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
@@ -54,7 +54,7 @@
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Отзыв</h1>
       <section class="intro">
-        <h2 class="intro__header">Оставьте свой отзыв</h2>
+        <h2 class="intro__header intro__header--form">Оставьте свой отзыв</h2>
         <p class="intro__description intro__description--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form method="POST" class="message" action="https://echo.htmlacademy.ru">
@@ -62,15 +62,15 @@
           <h2 class="message__header message__header--user">Представьтесь:</h2>
           <label class="message__label">
             Имя*:
-            <input class="message__input message__input--user" type="text" id="I" name="I" value="Петр">
+            <input class="message__input message__input--user" type="text" id="I" name="I" placeholder="Петр">
           </label>
           <label class="message__label">
             Фамилия*:
-            <input class="message__input message__input--user" type="text" id="F" name="F" value="Иванов">
+            <input class="message__input message__input--user" type="text" id="F" name="F" placeholder="Иванов">
           </label>
           <label class="message__label">
             Отчество:
-            <input class="message__input message__input--user" type="text" id="O" name="O" value="Александрович">
+            <input class="message__input message__input--user" type="text" id="O" name="O" placeholder="Александрович">
           </label>
         </fieldset>
         <fieldset class="message__contacts">
@@ -78,49 +78,49 @@
           <div class="message__wrapper message__wrapper--contacts">
             <label class="message__label message__label--contacts message__label--phone">
               <span class="message__word"><span class="message__word message__word--hidden">Контактный&nbsp;</span>телефон*:</span>
-              <input class="message__input message__input--phone" type="tel" id="phone" name="phone" value="Введите телефон">
-              <div class="message__after">
+              <input class="message__input message__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
+              <span class="message__after">
                 <svg>
                   <use xlink:href="img/sprite.svg#icon-phone"></use>
                 </svg>
-              </div>
+              </span>
             </label>
             <label class="message__label message__label--contacts message__label--email">
               Электронная почта*:
-              <input class="message__input message__input--email" type="email" id="email" name="email" value="Введите e-mail">
-              <div class="message__after message__after--email">
+              <input class="message__input message__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
+              <span class="message__after message__after--email">
                 <svg>
                   <use xlink:href="img/sprite.svg#icon-mail"></use>
                 </svg>
-              </div>
+              </span>
             </label>
           </div>
         </fieldset>
         <fieldset class="message__impression">
           <h2 class="message__header message__header--impression">Ваше общее впечатление:</h2>
-          <input class="visually-hidden" type="radio" id="ok" name="impression" checked>
+          <input class="message__radio visually-hidden" type="radio" id="ok" value="true" name="impression" checked>
           <label class="message__label message__label--radio" for="ok">Скорее положительное</label>
-          <input class="visually-hidden" type="radio" id="no" name="impression">
+          <input class="message__radio visually-hidden" type="radio" id="no" value="false" name="impression">
           <label class="message__label message__label--radio" for="no">Скорее отрицательное</label>
-          <input class="visually-hidden" type="radio" id="no-response" name="impression">
+          <input class="message__radio visually-hidden" type="radio" id="no-response" value="no-response" name="impression">
           <label class="message__label message__label--radio" for="no-response">Затрудняюсь ответить</label>
         </fieldset>
         <fieldset class="message__objects">
           <h2 class="message__header message__header--objects">Посещенные достопримечательности:</h2>
           <div class="message__wrapper message__wrapper--objects">
-            <input class="visually-hidden" type="checkbox" id="checkbox-1" name="devil" checked>
+            <input class="message__checkbox visually-hidden" type="checkbox" id="checkbox-1" name="devil" value="devil" checked>
             <label class="message__label message__label--checkbox" for="checkbox-1">Мост Дьявола</label>
-            <input class="visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" checked>
+            <input class="message__checkbox visually-hidden" type="checkbox" id="checkbox-2" name="bell-mountain" value="bell-mountain" checked>
             <label class="message__label message__label--checkbox" for="checkbox-2">Гора-Колокол</label>
-            <input class="visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" checked>
+            <input class="message__checkbox visually-hidden" type="checkbox" id="checkbox-3" name="slide-park" value="slide-park" checked>
             <label class="message__label message__label--checkbox" for="checkbox-3">Слайд-парк</label>
-            <input class="visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs">
+            <input class="message__checkbox visually-hidden" type="checkbox" id="checkbox-4" name="red-climbs" value="red-climbs">
             <label class="message__label message__label--checkbox" for="checkbox-4">Красные скалы</label>
           </div>
         </fieldset>
         <fieldset class="message__emotions">
-          <h2 class="message__header">Опишите ваши эмоции:</h2>
-          <textarea class="message__letter" name="emotions">Опишите подробно все свои восторги</textarea>
+          <h2 class="message__header">Опишите свои эмоции:</h2>
+          <textarea class="message__letter" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <div class="message__wrapper message__wrapper--submit">
           <button type="submit" class="button button--submit">Отправить отзыв</button>

@@ -9,14 +9,16 @@
   text-transform: uppercase;
   line-height: 22px;
   text-align: center;
-  margin-top: 31px;
-  margin-bottom: 27px;
+  margin-top: 47px;
+  margin-bottom: 29px;
   padding-left: 30px;
   padding-right: 30px;
   letter-spacing: -0.01em;
 
   &--main {
+    margin-top: 49px;
     line-height: 26px;
+    margin-bottom: 27px;
   }
 }
 
@@ -27,8 +29,8 @@
   text-transform: uppercase;
   line-height: 24px;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-bottom: 25px;
 
   &--main {
@@ -36,6 +38,11 @@
     padding-right: 30px;
     line-height: 26px;
     margin-bottom: 12px;
+  }
+
+  &--form {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -58,27 +65,36 @@
     padding-right: 90px;
     font-size: 30px;
     line-height: 27px;
+    margin-bottom: 25px;
 
     &--main {
       margin-top: 56px;
       font-size: 22px;
     }
+
+    &--form {
+      margin-bottom: 31px;
+      letter-spacing: 0.01em;
+    }
   }
 
   .intro__description {
-    padding-left: 170px;
-    padding-right: 170px;
-    margin-top: 27px;
-    margin-bottom: 25px;
+    padding-left: 160px;
+    padding-right: 160px;
+    margin-top: 31px;
+    margin-bottom: 21px;
+    letter-spacing: 0.004em;
 
     &--main,
     &--form {
       padding-left: 130px;
       padding-right: 130px;
+      margin-top: 27px;
+      margin-bottom: 25px;
     }
 
     &--form {
-      margin-bottom: 19px;
+      margin-bottom: 18px;
     }
   }
 }
@@ -86,6 +102,10 @@
 @media (min-width: @desktop-width) {
   .intro {
     margin-bottom: 17px;
+
+    &--photo {
+      margin-bottom: 15px;
+    }
   }
 
   .intro__header {
@@ -112,7 +132,7 @@
     }
 
     &--form {
-      margin-bottom: 30px;
+      margin-bottom: 27px;
     }
   }
 }
