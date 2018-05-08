@@ -88,6 +88,20 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+        },
+        files: [{
+          expand: true,
+          cwd: "source/",
+          src: ["img/**/*.{png,jpg,gif}"],
+          dest: "build/"
+        }]
+      }
+    },
+
     csso: {
       style: {
         options: {
@@ -140,6 +154,7 @@ module.exports = function(grunt) {
     "csso",
     "svgstore",
     "posthtml",
-    "cwebp"
+    "cwebp",
+    "imagemin"
   ]);
 };
