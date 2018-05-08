@@ -11,9 +11,25 @@
 }
 
 .slide__head {
+  position: relative;
   margin: 0;
   margin-bottom: 10px;
   font-size: 18px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #d5d5d5;
+    width: 280px;
+    height: 1px;
+    bottom: 52px;
+    left: 20px;
+  }
+
+  &--first::before {
+    display: none;
+  }
 }
 
 .slide__number,
@@ -132,6 +148,10 @@
       padding-left: 25px;
       padding-right: 25px;
       margin-top: -2px;
+    }
+
+    &::before {
+      display: none;
     }
   }
 

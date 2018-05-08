@@ -4,6 +4,7 @@
 }
 
 .message__header {
+  position: relative;
   text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 900;
@@ -25,6 +26,20 @@
 
   &--user {
     margin-bottom: 23px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #d5d5d5;
+    width: 320px;
+    height: 1px;
+    bottom: 41px;
+  }
+
+  &--objects::before {
+    bottom: 70px;
   }
 }
 
@@ -190,7 +205,7 @@
   &::-moz-placeholder,
   &:-moz-placeholder,
   &:-ms-input-placeholder,
-  &::placeholder  {
+  &::placeholder {
     color: #000000;
     opacity: 1;
   }
@@ -267,7 +282,6 @@
 
   .message__header {
     letter-spacing: -0.02em;
-    position: relative;
     font-size: 22px;
     font-weight: 900;
 
@@ -464,7 +478,7 @@
   .message__contacts {
     margin-bottom: 0;
     flex-direction: row;
-    padding-bottom: 12px;
+    padding-bottom: 10px;
   }
 
   .message__header {
@@ -484,7 +498,7 @@
     }
 
     &--contacts {
-      margin-bottom: 65px;
+      margin-bottom: 67px;
     }
 
     &--objects {
@@ -523,6 +537,10 @@
 
     &--email {
       right: 5px;
+    }
+
+    svg {
+      margin-bottom: 4px;
     }
   }
 
