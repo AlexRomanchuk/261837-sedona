@@ -17,7 +17,7 @@
   font-size: 14px;
   line-height: 24px;
   margin-top: 2px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .photo__image {
@@ -29,11 +29,18 @@
   font-weight: 900;
   font-size: 14px;
   line-height: 24px;
+  margin-top: -5px;
+
+  svg {
+    width: 24px;
+    height: 18px;
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .photo {
-    position: relative;
+    .flex(column, left);
     width: 50%;
     padding: 0;
     height: 347px;
@@ -44,17 +51,32 @@
       height: 480px;
       margin-top: 29px;
     }
+
+    &:nth-child(n) .photo__controls {
+      background-color: #eaeaea;
+    }
+
+    &:nth-child(2n) .photo__controls {
+      background-color: #f2f2f2;
+    }
   }
 
   .photo__controls {
-    .flex(row, space-between);
-    position: absolute;
+    .flex(row, left);
     width: 100%;
-    bottom: 5px;
+    margin-top: -4px;
+    padding-top: 5px;
+    padding-bottom: 13px;
+
+    &--first {
+      .flex(row, space-between);
+    }
   }
 
   .photo__name {
     .flex(column, left);
+    min-width: 210px;
+    margin-right: 60px;
   }
 
   .photo__image {
@@ -71,13 +93,24 @@
   }
 
   .photo__like {
-    margin-right: 30px;
-    line-height: 70px;
+    position: relative;
+    margin-right: 21px;
+    margin-top: 24px;
+
+    svg {
+      position: absolute;
+      width: 26px;
+      height: 20px;
+      margin-right: 8px;
+      top: -1px;
+      left: -35px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .photo {
+    position: relative;
     width: 33.3%;
     height: 270px;
 
@@ -85,16 +118,27 @@
       height: 400px;
       margin-top: 30px;
     }
+
+    &:nth-child(n) .photo__controls,
+    &:nth-child(2n) .photo__controls {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 
   .photo__controls {
+    position: absolute;
     bottom: 3px;
     padding-top: 10px;
-    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: 0;
+    min-height: 70px;
 
     &--first {
       bottom: 0;
     }
+  }
+
+  .photo__name {
+    margin-right: 138px;
   }
 
   .photo__image {
@@ -113,10 +157,14 @@
   }
 
   .photo__header {
-    margin-top: 8px;
+    margin-top: 9px;
+  }
 
-    &--first {
-      margin-top: 9px;
+  .photo__like {
+    margin-top: 18px;
+
+    svg {
+      fill: #ffffff;
     }
   }
 }

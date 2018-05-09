@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
   <body>
     <div style="display: none;">
@@ -12,8 +14,8 @@
       <include src="build/img/html-sprite.svg"></include>
     </div>
     <header class="main-header main-header--main-page">
-      <nav class="main-nav">
-        <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
+      <nav class="main-nav main-nav--noscript main-nav--closed">
+        <button class="main-nav__close main-nav__close--hidden" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
           <li>
             <ul class="main-nav__wrapper main-nav__wrapper--left">
@@ -31,7 +33,7 @@
                 <a href="form.html" class="site-list__item site-list__item--form">Форма отзыва</a>
               </li>
               <li>
-                <a href="#" class="site-list__item site-list__item__last">HTML Academy</a>
+                <a href="https://htmlacademy.ru/intensive/adaptive" class="site-list__item site-list__item--last">HTML Academy</a>
               </li>
             </ul>
           </li>
@@ -54,20 +56,23 @@
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Главная страница</h1>
       <section class="intro intro--main">
-        <h2 class="intro__header intro__header--main">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="intro__header intro__header--main">Седона &#8211; небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="intro__description intro__description--main">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </section>
       <section class="features">
         <div class="features__wrapper slider">
           <ul class="features__list slider__list">
-            <li class="features__item slider__item slide slide--super">
-              <div class="slide__header slide__header--super">
+            <li class="features__item slider__item slide slide--super slide--first">
+              <div class="slide__header slide__header--super slide__header--first">
                 <h2 class="slide__head slide__head--super">Настоящий городок</h2>
-                <span class="slide__number">№ 1</span>
-                <p class="slide__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <span class="slide__number slide__number--super">№ 1</span>
+                <p class="slide__description slide__description--super">Седона не аттракцион для туристов, там течет своя жизнь</p>
               </div>
               <div class="slide__image">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
                   <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@2x.jpg 2x" class="slide__picture" alt="">
@@ -87,7 +92,7 @@
                       <use xlink:href="#icon-gift"></use>
                     </svg>
                     <h3 class="more__head">Сувениры</h3>
-                    <p class="more__info more__info--souvenirs">Не только китайского, но и местного производства!</p>
+                    <p class="more__info more__info--souvenirs">Не&nbsp;только&nbsp;китайского,<span class="more__br"><br></span>но&nbsp;и местного производства!</p>
                   </li>
                   <li class="more__item">
                     <svg class="more__img" width="70" height="70">
@@ -101,12 +106,15 @@
             </li>
             <li class="features__item slider__item slide slide--super">
               <div class="slide__header slide__header--super">
-                <h2 class="slide__head slide__head--super">Там есть Мост Дъявола</h2>
-                <span class="slide__number">№ 2</span>
-                <p class="slide__description">По нему можно пройти! Если вы осмелитесь, конечно</p>
+                <h2 class="slide__head slide__head--super">Там есть Мост&nbsp;Дьявола</h2>
+                <span class="slide__number slide__number--super">№ 2</span>
+                <p class="slide__description slide__description--super">Да, по нему можно пройти!<span class="slide__br"><br></span>Если вы осмелитесь, конечно</p>
               </div>
               <div class="slide__image">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
                   <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@2x.jpg 2x" class="slide__picture" alt="">
@@ -115,7 +123,7 @@
             </li>
             <li class="features__item slider__item slide">
               <div class="slide__header">
-                <h2 class="slide__head">Небольшая площадь</h2>
+                <h2 class="slide__head slide__head--first">Небольшая площадь</h2>
                 <span class="slide__number">№ 3</span>
                 <p class="slide__description">Все интересные места находятся очень близко</p>
               </div>
@@ -124,14 +132,14 @@
               <div class="slide__header">
                 <h2 class="slide__head">Красивая дорога</h2>
                 <span class="slide__number">№ 4</span>
-                <p class="slide__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <p class="slide__description">Ехать в Седону&nbsp;из Лас&#8209;Вегаса совсем не&nbsp;скучно!</p>
               </div>
             </li>
             <li class="features__item slider__item slide">
               <div class="slide__header">
                 <h2 class="slide__head">Мало туристов</h2>
                 <span class="slide__number">№ 5</span>
-                <p class="slide__description">Большинство ездит в Гранд Каньон и толпится там</p>
+                <p class="slide__description">Большинство едет в Гранд&nbsp;Каньон и толпится там</p>
               </div>
             </li>
           </ul>
@@ -139,11 +147,10 @@
       </section>
       <section class="interest">
         <h2 class="interest__header">Заинтересовались?</h2>
-        <p class="interest__info interest__info--main">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне!</p>
+        <p class="interest__info interest__info--main">Укажите предполагаемые даты поездки,<span class="interest__br"><br></span>и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения&nbsp;гостиниц в Седоне</p>
         <a href="#" class="button">Найти гостиницу</a>
       </section>
-      <section class="page-main__map">
-      </section>
+      <iframe class="page-main__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52381.8967497465!2d-111.82742677377824!3d34.85953019879354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1525855770009" allowfullscreen></iframe>
     </main>
     <footer class="main-footer">
       <h2 class="main-footer__tag">#VisitSedona</h2>
@@ -178,5 +185,6 @@
         </a>
       </p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

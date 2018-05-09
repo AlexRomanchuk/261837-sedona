@@ -11,11 +11,10 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**/*.{jpg,gif,png}",
             "img/**/logo-*.svg",
             "img/**/bg-*.svg",
             "img/**/text-*.svg",
-            "js/**"
+            "js/**/*.js"
           ],
           dest: "build"
         }]
@@ -88,6 +87,20 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      dynamic: {
+        options: {
+          optimizationLevel: 3,
+        },
+        files: [{
+          expand: true,
+          cwd: "source/",
+          src: ["img/**/*.{png,jpg,gif}"],
+          dest: "build/"
+        }]
+      }
+    },
+
     csso: {
       style: {
         options: {
@@ -140,6 +153,7 @@ module.exports = function(grunt) {
     "csso",
     "svgstore",
     "posthtml",
+    "imagemin",
     "cwebp"
   ]);
 };

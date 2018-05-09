@@ -32,6 +32,7 @@
 
   &--last {
     border-bottom: none;
+    box-shadow: inset 0 -5px 4px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -43,6 +44,7 @@
     border: none;
     box-shadow: none;
     font-size: 13px;
+    letter-spacing: 0.05em;
 
     &:hover {
       background-color: transparent;
@@ -51,6 +53,45 @@
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
+    }
+
+    &--last {
+      box-shadow: none;
+      margin-left: 0;
+    }
+
+    &--first {
+      margin-left: 8px;
+    }
+
+    &--photo {
+      margin-left: 7px;
+    }
+
+    &--form {
+      margin-left: 3px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    &--last {
+      box-shadow: none;
+      margin-left: 2px;
+    }
+
+    &--first {
+      margin-left: 12px;
+    }
+
+    &--photo {
+      margin-right: 40px;
+      margin-left: 0;
+    }
+
+    &--form {
+      margin-left: 12px;
     }
   }
 }
