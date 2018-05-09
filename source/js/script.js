@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 
 var ESC_KEYCODE = 27;
 var ENTER_KEYCODE = 13;
@@ -32,8 +32,9 @@ closeButton.addEventListener("keydown", function (evt) {
   }
 });
 
-document.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === ESC_KEYCODE) {
+    evt.preventDefault();
     closeMenu();
   }
 });
