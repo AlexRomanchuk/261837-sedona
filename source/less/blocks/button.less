@@ -29,6 +29,14 @@
   &--submit {
     margin-left: 20px;
   }
+
+  &--modal {
+    width: 200px;
+  }
+
+  &--modal-fail {
+    width: 200px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -37,8 +45,10 @@
     margin: 0;
     font-size: 21px;
 
-    &--modal {
-      width: 280px;
+    &--modal,
+    &--modal-fail {
+      width: 240px;
+      margin-left: 60px;
     }
 
     &--submit {
@@ -55,8 +65,10 @@
     width: 460px;
     margin: 0;
 
-    &--modal {
-      width: 280px;
+    &--modal,
+    &--modal-fail {
+      width: 240px;
+      margin-left: 60px;
     }
 
     &--submit {

@@ -12,7 +12,7 @@
       <include src="build/img/html-sprite.svg"></include>
     </div>
     <header class="main-header">
-      <nav class="main-nav main-nav--noscript">
+      <nav class="main-nav main-nav--noscript main-nav--closed">
         <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
           <li>
@@ -161,15 +161,16 @@
         </a>
       </p>
     </footer>
-    <div class="modal modal--success">
+    <div class="modal modal--success modal--closed">
       <h2 class="modal__header">Ваш отзыв отправлен!</h2>
       <p class="modal__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       <button type="button" class="button button--modal">Закрыть окно</button>
     </div>
-    <div class="modal modal--failure">
+    <div class="modal modal--failure modal--closed">
       <h2 class="modal__header">Что-то пошло не так!</h2>
       <p class="modal__info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
       <button type="button" class="button button--modal-fail">Ок</button>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>
