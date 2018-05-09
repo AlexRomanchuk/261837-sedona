@@ -11,11 +11,10 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "fonts/**/*.{woff,woff2}",
-            "img/**/*.{jpg,gif,png}",
             "img/**/logo-*.svg",
             "img/**/bg-*.svg",
             "img/**/text-*.svg",
-            "js/**"
+            "js/**/*.js"
           ],
           dest: "build"
         }]
@@ -154,7 +153,7 @@ module.exports = function(grunt) {
     "csso",
     "svgstore",
     "posthtml",
-    "cwebp",
-    "imagemin"
+    "imagemin",
+    "cwebp"
   ]);
 };
