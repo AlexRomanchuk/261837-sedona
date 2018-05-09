@@ -7,6 +7,7 @@ var closeButton = document.querySelector(".main-nav__close");
 var menu = document.querySelector(".main-nav");
 
 menu.classList.remove("main-nav--noscript");
+closeButton.classList.remove("main-nav__close--hidden");
 
 function openMenu() {
   menu.classList.remove("main-nav--closed");

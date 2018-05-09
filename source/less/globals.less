@@ -23,15 +23,19 @@ fieldset {
   padding-bottom: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (min-width: @tablet-width) {
   body {
-    max-width: @tablet-width;
+    min-width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
   body {
-    max-width: @desktop-width;
+    min-width: @desktop-width;
     padding: 0 40px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   }

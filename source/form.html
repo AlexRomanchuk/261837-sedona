@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
   </head>
   <body>
     <div style="display: none;">
@@ -13,7 +15,7 @@
     </div>
     <header class="main-header">
       <nav class="main-nav main-nav--noscript main-nav--closed">
-        <button class="main-nav__close" type="button" aria-label="Закрыть меню"></button>
+        <button class="main-nav__close main-nav__close--hidden" type="button" aria-label="Закрыть меню"></button>
         <ul class="main-nav__list site-list">
           <li>
             <ul class="main-nav__wrapper main-nav__wrapper--left">
@@ -31,7 +33,7 @@
                 <a href="#" class="site-list__item site-list__item--form">Форма отзыва</a>
               </li>
               <li>
-                <a href="#" class="site-list__item site-list__item--last">HTML Academy</a>
+                <a href="https://htmlacademy.ru/intensive/adaptive" class="site-list__item site-list__item--last">HTML Academy</a>
               </li>
             </ul>
           </li>
