@@ -13,6 +13,17 @@ body {
   max-width: 320px;
 }
 
+.main {
+  margin: 0;
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 320px;
+}
+
 fieldset {
   border: none;
   display: flex;
@@ -31,12 +42,26 @@ a {
   body {
     min-width: @tablet-width;
   }
+
+  .wrapper {
+    min-width: @tablet-width;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  body {
-    min-width: @desktop-width;
+  body,
+  .main {
     padding: 0 40px;
+    max-width: @desktop-width;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .main {
+    margin: 0 auto;
+  }
+
+  .wrapper {
+    min-width: @desktop-width;
+    width: 100%;
   }
 }
