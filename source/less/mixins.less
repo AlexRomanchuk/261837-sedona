@@ -5,3 +5,30 @@
   flex-direction: @direction;
   justify-content: @justify;
 }
+
+.placeholder(@color) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+    opacity: 1;
+  }
+
+  &::placeholder {
+    color: @color;
+    opacity: 1;
+  }
+}
