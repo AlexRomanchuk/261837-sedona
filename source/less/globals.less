@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #ffffff;
   width: 100%;
   margin: 0 auto;
   max-width: 320px;
@@ -49,9 +50,12 @@ a {
 }
 
 @media (min-width: @desktop-width) {
+  html {
+    background-color: #eeeeee;
+  }
+
   body,
   .main {
-    padding: 0 40px;
     max-width: @desktop-width;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
   }
