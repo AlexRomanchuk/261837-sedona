@@ -47,6 +47,10 @@
     padding: 0;
   }
 
+  .more__br {
+    display: inline;
+  }
+
   .more__list {
     display: flex;
     flex-direction: row;
@@ -57,7 +61,7 @@
     position: static;
     width: 75px;
     height: 75px;
-    margin: 26px auto 23px auto;
+    margin: 24px auto 23px auto;
   }
 
   .more__item {
@@ -80,6 +84,7 @@
   .more__info {
     padding-left: 50px;
     padding-right: 50px;
+    line-height: 21px;
 
     &--souvenirs {
       padding-left: 37px;
@@ -88,8 +93,8 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .more__br {
-    display: inline;
+@media (min-width: @desktop-width) {
+  .more__info {
+    line-height: 22px;
   }
 }
