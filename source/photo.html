@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/ptsans.woff2" as="font">
     <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none;">
@@ -50,13 +55,13 @@
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
       <div class="main-header__back">
-        <img class="main-header__main-image" src="img/text-sedona.svg" alt="">
+        <img class="main-header__main-image" src="img/text-sedona.svg" alt="" width="225" height="169">
       </div>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Sedona - Фотогалерея</h1>
       <section class="intro intro--photo">
-        <h2 class="intro__header">Фото и видео</h2>
+        <h2 class="intro__header intro__header--photo">Фото и видео</h2>
         <p class="intro__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
       </section>
       <section class="gallery">
@@ -77,7 +82,7 @@
               <p class="photo__author">Автор фото: Борис</p>
             </div>
             <span class="photo__like">
-              <svg>
+              <svg width="24" height="18">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
               </svg>
               1350
@@ -88,7 +93,7 @@
           <a href="img/photo-cactus-desktop@1x.jpg">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
@@ -101,7 +106,7 @@
               <p class="photo__author">Автор фото: Сергей</p>
             </div>
             <span class="photo__like">
-              <svg>
+              <svg width="24" height="18">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
               </svg>
               143
@@ -112,7 +117,7 @@
           <a href="img/photo-roads-desktop@1x.jpg">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
@@ -125,7 +130,7 @@
               <p class="photo__author">Автор фото: Петр</p>
             </div>
             <span class="photo__like">
-              <svg>
+              <svg width="24" height="18">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
               </svg>
               96
@@ -136,7 +141,7 @@
           <a href="img/photo-bridge-desktop@1x.jpg">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
@@ -149,7 +154,7 @@
               <p class="photo__author">Автор фото: Антон</p>
             </div>
             <span class="photo__like">
-              <svg>
+              <svg width="24" height="18">
                 <use xlink:href="img/sprite.svg#icon-like"></use>
               </svg>
               254
@@ -163,35 +168,35 @@
         <div class="interest__video video">
           <div class="video__pult">
             <div class="video__button video__button--pult video__button--reload">
-              <svg>
+              <svg width="22" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-replay"></use>
               </svg>
             </div>
             <div class="video__line"></div>
             <div class="video__button video__button--pult video__button--cc">
-              <svg>
+              <svg width="32" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
               </svg>
             </div>
             <div class="video__button video__button--pult video__button--scale">
-              <svg>
+              <svg width="32" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
               </svg>
             </div>
           </div>
           <div class="video__controls">
             <div class="video__button video__button--reload">
-              <svg>
+              <svg width="22" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-replay"></use>
               </svg>
             </div>
             <div class="video__button video__button--cc">
-              <svg>
+              <svg width="32" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
               </svg>
             </div>
             <div class="video__button video__button--scale">
-              <svg>
+              <svg width="32" height="20">
                 <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
               </svg>
             </div>

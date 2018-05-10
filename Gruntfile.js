@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     cwebp: {
       dynamic: {
         options: {
-          q: 90
+          q: 80
         },
         files: [{
           expand: true,

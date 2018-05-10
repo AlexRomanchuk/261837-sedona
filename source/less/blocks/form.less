@@ -58,7 +58,7 @@
   svg {
     width: 17px;
     height: 17px;
-    margin-left: 21px;
+    margin-left: 20px;
     margin-top: 20px;
   }
 }
@@ -200,15 +200,7 @@
   padding: 0;
   padding-left: 20px;
   font-size: 18px;
-
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-moz-placeholder,
-  &:-ms-input-placeholder,
-  &::placeholder {
-    color: #000000;
-    opacity: 1;
-  }
+  .placeholder(#000000);
 
   &:invalid {
     outline: 3px solid red;
@@ -245,14 +237,7 @@
   font-weight: 900;
   font-size: 18px;
   line-height: 26px;
-
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-moz-placeholder,
-  &:-ms-input-placeholder {
-    color: #000000;
-    opacity: 1;
-  }
+  .placeholder(#000000);
 
   &:hover {
     background-color: #e5e5e5;
@@ -475,13 +460,16 @@
     &--contacts {
       width: 100%;
       margin-right: 60px;
-      justify-content: left;
+      justify-content: flex-start;
+    }
+
+    &--objects {
+      width: 956px;
     }
   }
 
   .message__contacts {
     margin-bottom: 0;
-    flex-direction: row;
     padding-bottom: 10px;
   }
 
@@ -533,6 +521,10 @@
     &--radio {
       margin-left: 64px;
     }
+
+    &--user {
+      margin-bottom: 0;
+    }
   }
 
   .message__after {
@@ -544,7 +536,7 @@
     }
 
     svg {
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
   }
 
