@@ -3,6 +3,28 @@
   margin-bottom: 55px;
 }
 
+.message__fields {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #ffffff;
+  padding-bottom: 20px;
+
+  &--impression {
+    padding-bottom: 8px;
+  }
+
+  &--user {
+    padding-bottom: 23px;
+  }
+
+  &--contacts {
+    padding-bottom: 21px;
+  }
+}
+
 .message__header {
   position: relative;
   text-align: center;
@@ -176,18 +198,6 @@
   opacity: 0.3;
 }
 
-.message__impression {
-  padding-bottom: 8px;
-}
-
-.message__user {
-  padding-bottom: 23px;
-}
-
-.message__contacts {
-  padding-bottom: 21px;
-}
-
 .message__input {
   border: none;
   height: 58px;
@@ -354,41 +364,43 @@
     line-height: 63px;
   }
 
-  .message__impression,
-  .message__user {
-    border-top: none;
-    width: 50%;
-    margin-bottom: 1px;
-    padding-bottom: 20px;
-  }
-
-  .message__impression {
-    position: relative;
-    order: -1;
-
-    &::after {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 1px;
-      height: 295px;
-      top: 5px;
-      right: -2px;
-      background-color: #d5d5d5;
+  .message__fields {
+    &--impression,
+    &--user {
+      border-top: none;
+      width: 50%;
+      margin-bottom: 1px;
+      padding-bottom: 20px;
     }
-  }
 
-  .message__contacts,
-  .message__emotions,
-  .message__objects {
-    width: 100%;
-  }
+    &--impression {
+      position: relative;
+      order: -1;
 
-  .message__objects {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 22px;
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 1px;
+        height: 295px;
+        top: 5px;
+        right: -2px;
+        background-color: #d5d5d5;
+      }
+    }
+
+    &--contacts,
+    &--emotions,
+    &--objects {
+      width: 100%;
+    }
+
+    &--objects {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 22px;
+    }
   }
 
   .message__letter {
@@ -468,9 +480,22 @@
     }
   }
 
-  .message__contacts {
-    margin-bottom: 0;
-    padding-bottom: 10px;
+  .message__fields {
+    &--contacts {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+    }
+
+    &--impression,
+    &--user {
+      padding-bottom: 18px;
+    }
+
+    &--objects {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 19px;
+    }
   }
 
   .message__header {
@@ -556,17 +581,6 @@
     &--user {
       margin-right: 60px;
     }
-  }
-
-  .message__impression,
-  .message__user {
-    padding-bottom: 18px;
-  }
-
-  .message__objects {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 19px;
   }
 
   .message__letter {
